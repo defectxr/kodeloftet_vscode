@@ -1,0 +1,34 @@
+/* CSS styling usually written in the order of the HTML elements */
+
+/* CSS Selector */
+body {
+    /* CSS Declaration - content between curly brackets*/
+    /* CSS Rule - property:value; */
+    background-color: lightgray;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.headerLogo {
+    /* Longhand - specifies style elements with several declarations */
+    border-color: black;
+    border-width: 4px;
+    border-style: solid;
+
+    /* Shorthand - specifies style elements as many values after one element*/
+    border: black 4px solid;
+
+    padding: 10px;
+    margin: 10px;
+}
+
+.navigationList {
+    display: flex;
+    gap: 10px;
+    /* gap only applies left and right */
+    list-style-type: none;
+}

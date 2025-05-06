@@ -1,62 +1,45 @@
 <!DOCTYPE html>
-<html lang="no">
-  <!-- Head er informasjon til nettleseren -->
+<html lang="en">
   <head>
-    <title>Hjem</title>
+    <title>Sara Myrheim | Aspiring Web Developer</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="stylesheet" href="styles.css" />
     <script type="module" src="script.js"></script>
   </head>
 
-  <!-- Body er innhold til nettsiden -->
   <body>
     <header>
-      <!-- Header innhold: Logo, navigasjon, innlogging, søk -->
-      <div class="headerLogo">SM</div>
-      <nav>
-        <ul class="navigationList">
-          <li>Nav 1</li>
-          <li>Nav 2</li>
-          <li>Nav 3</li>
+      <a href="./index.html" class="headerLeft">
+        <div>Sara Myrheim</div>
+        <div class="headerTitle">[ Aspiring Web Developer ]</div>
+      </a>
+      <nav class="headerRight">
+        <ul class="headerNav">
+          <li><a href="./projects.html">Projects</a></li>
+          <li><a href="./about.html">About</a></li>
+          <li><a href="mailto:fakesara@hotmail.com">Contact</a></li>
         </ul>
       </nav>
     </header>
 
     <main>
-      <!-- Main innhold: Hoved informasjon delt i seksjon inndelinger -->
-      <section class="hero">
-        <!-- Hjem -->
-        <h1>Lorem, ipsum dolor.</h1>
-        <div class="heroIntro">
-          <img src="" alt="Profilbilde">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, quis.</p>
+      <section class="columnMain">
+        <div class="columnMainLeft">
+          <h1 class="landingTitle">./portfolio</h1>
         </div>
-      </section>
-      
-      <section>
-        <!-- Om meg -->
-        <h2>Lorem ipsum dolor sit.</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio, fugit.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, ratione.</p>
-      </section>
-
-      <section>
-        <!-- Prosjekter -->
-        <div>
-          <h3>Prosjekt overskrift</h3>
-          <img src="" alt="Prosjektbilde">
-          <p>Prosjekt tekst</p>
+        <div class="columnMainRight">
         </div>
       </section>
     </main>
 
     <footer>
-      <!-- Footer innhold: Kreditasjon, navigasjon, vilkår -->
-      <h3>Laget av Julie Hauge</h3>
-      <div>
-        <p>Finn meg på github</p>
-        <img src="" alt="Github logo" />
+      <div class="footerLeft">
+        <p><a href="https://github.com/defectxr">GitHub</a></p>
+        <p><a href="#">Instagram</a></p>
+      </div>
+      <div class="footerRight">
+        <div class="credit">Written by Sara Myrheim.</div>
       </div>
     </footer>
   </body>

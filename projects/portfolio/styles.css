@@ -1,34 +1,220 @@
-/* CSS styling usually written in the order of the HTML elements */
-
-/* CSS Selector */
-body {
-    /* CSS Declaration - content between curly brackets*/
-    /* CSS Rule - property:value; */
-    background-color: lightgray;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
+/* ------------------------------ link styling ------------------------------ */
+
+a:link, a:visited {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover, a:active {
+    color: inherit;
+    text-decoration: underline;
+}
+
+.headerNav a.active {
+    text-decoration: underline;
+}
+
+.projectsList a:hover {
+    color: #2b2b2b;
+    text-decoration: none;
+}
+
+/* ------------------------------- @font-face ------------------------------- */
+
+@font-face {
+    font-family: "PublicSans-Regular";
+    src: url("./src/fonts/PublicSans-Regular.ttf");
+}
+
+@font-face {
+    font-family: "SchibstedGrotesk-Regular";
+    src: url("./src/fonts/SchibstedGrotesk-Regular.ttf");
+}
+
+@font-face {
+    font-family: "SpaceMono-Regular";
+    src: url("./src/fonts/SpaceMono-Regular.ttf");
+}
+
+/* ---------------------------------- body ---------------------------------- */
+
+body {
+    background-color: #ffffff;
+    font-family: "SchibstedGrotesk-Regular", sans-serif;
+    font-size: 100%;
+    color: #2b2b2b;
+    margin: 32px;
+}
+
+/* --------------------------------- header --------------------------------- */
 
 header {
     display: flex;
-    align-items: center;
+    font-size: 1em;
+    font-family: "PublicSans-Regular", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    padding-bottom: 70px;
+    border-bottom: solid 1px #e1e1e1;
+    margin-bottom: 30px;
+}
+
+.headerLeft {
+    flex: 1;
+}
+
+.headerTitle {
+    color: #797979;
+    line-height: 150%;
+}
+
+.headerRight {
+    flex: 2;
+}
+
+.headerNav {
+    list-style-type: none;
+    display: flex;
     justify-content: space-between;
 }
 
-.headerLogo {
-    /* Longhand - specifies style elements with several declarations */
-    border-color: black;
-    border-width: 4px;
-    border-style: solid;
+/* ---------------------------------- main ---------------------------------- */
 
-    /* Shorthand - specifies style elements as many values after one element*/
-    border: black 4px solid;
-
-    padding: 10px;
-    margin: 10px;
+main {
+    min-height: 350px;
 }
 
-.navigationList {
+.columnMain {
     display: flex;
-    gap: 10px;
-    /* gap only applies left and right */
-    list-style-type: none;
+    min-height: 350px;
+}
+
+.columnMainLeft {
+    flex: 1;
+}
+
+.columnMainRight {
+    flex: 2;
+}
+
+/* --------------------------------- landing -------------------------------- */
+
+.landingTitle {
+    font-size: 12em;
+    font-family: "SpaceMono-Regular", "Lucidia Grande", sans-serif;
+    font-style: italic;
+    color: #e1e1e1;
+}
+
+/* -------------------------------- projects -------------------------------- */
+
+.projectsTitle {
+    font-size: 1em;
+    font-family: "PublicSans-Regular", sans-serif;
+    color: #797979;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+}
+
+.projectsList {
+    margin: 2rem 0;
+    font-size: 1em;
+    font-family: "PublicSans-Regular", sans-serif;
+    color: #bcbbbb;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    list-style: none;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.projectsImg {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    vertical-align: middle;
+}
+
+/* ---------------------------------- about --------------------------------- */
+
+.about {
+    display: flex;
+    min-height: 350px;
+}
+
+.aboutText {
+    flex: 2;
+}
+
+.about h3 {
+    color: #797979;
+}
+
+.row {
+    margin-bottom: 1.5rem;
+    display: flex;
+}
+
+.columnLeft {
+    font-size: 1em;
+    font-family: "PublicSans-Regular", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    flex: 1;
+}
+
+.columnRight {
+    flex: 1;
+}
+
+.columnRight p {
+    margin-bottom: 1em;
+}
+
+.aboutPortrait {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    flex: 1;
+}
+
+.aboutImg {
+    width: 75%;
+}
+
+/* --------------------------------- footer --------------------------------- */
+
+footer {
+    display: flex;
+    font-size: 1em;
+    font-family: "PublicSans-Regular", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    padding-top: 70px;
+    border-top: solid 1px #e1e1e1;
+    margin-top: 30px;
+}
+
+.footerLeft {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+.footerRight {
+    display: flex;
+    flex: 2;
+    justify-content: flex-end;
+}
+
+.credit {
+    color: #bcbbbb;
 }

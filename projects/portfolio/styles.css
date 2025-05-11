@@ -167,6 +167,7 @@ a:focus {
 }
 
 .about-text h4 {
+  font-weight: normal;
   color: #797979;
 }
 

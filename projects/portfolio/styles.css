@@ -72,10 +72,13 @@ main {
   display: flex;
   flex: 1 1 66%;
   justify-content: space-between;
-  gap: 2.5em;
 
   padding: 0;
   list-style-type: none;
+}
+
+.header-nav > * {
+  flex-shrink: 0;
 }
 
 .header-nav a {
@@ -147,15 +150,18 @@ a:focus {
 
 .about {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .row {
   display: flex;
-  flex-direction: row;
+  gap: 2.5em;
 }
 
 .row > * {
   width: 100%;
+  margin-block-start: 0;
+  margin-block-end: 0;
 }
 
 .row:not(:last-child) > * {
@@ -195,7 +201,9 @@ a:focus {
 }
 
 .about-photo > * {
-  width: 80%;
+  max-width: 80%;
+  min-width: 250px;
+  padding-left: 2.5em;
 }
 
 /* --------------------------------- footer --------------------------------- */
@@ -223,4 +231,54 @@ a:focus {
 
 .footer span {
   color: #797979;
+}
+
+/* ------------------------------- media query ------------------------------ */
+
+@media (max-width: 600px) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
+  .header {
+    flex-wrap: wrap;
+    gap: 1em;
+
+    padding-bottom: 2.5em;
+  }
+
+  .projects {
+    flex-wrap: wrap;
+  }
+
+  .projects h3 {
+    margin-bottom: 1em;
+  }
+
+  .projects-right img {
+    height: 250px;
+  }
+
+  .row {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .row:not(:last-child) > *,
+  .row > * {
+    margin-bottom: 1em;
+  }
+
+  .row {
+    margin-bottom: 1.5em;
+  }
+}
+
+@media (max-width: 916px) {
+  .about-photo {
+    justify-content: center;
+
+    margin-top: 2.5em;
+  }
 }

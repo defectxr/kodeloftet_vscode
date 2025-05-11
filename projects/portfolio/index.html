@@ -1,45 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Sara Myrheim | Aspiring Web Developer</title>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
     <script type="module" src="script.js"></script>
+    <title>Sara Myrheim | Aspiring Web Developer</title>
   </head>
-
   <body>
     <header>
-      <a href="./index.html" class="headerLeft">
-        <div>Sara Myrheim</div>
-        <div class="headerTitle">[ Aspiring Web Developer ]</div>
-      </a>
-      <nav class="headerRight">
-        <ul class="headerNav">
-          <li><a href="./projects.html">Projects</a></li>
-          <li><a href="./about.html">About</a></li>
-          <li><a href="mailto:fakesara@hotmail.com">Contact</a></li>
+      <div class="header">
+        <div class="header-title">
+          <div>Sara Myrheim</div>
+          <div><span>[ Aspiring ] Web Developer</span></div>
+        </div>
+        <ul class="header-nav">
+          <li><a href="index.html">[ Projects ]</a></li>
+          <li><a href="about.html">[ About ]</a></li>
+          <li><a href="mailto:fakesara@hotmail.com">[ Contact ]</a></li>
         </ul>
-      </nav>
+      </div>
     </header>
 
     <main>
-      <section class="columnMain">
-        <div class="columnMainLeft">
-          <h1 class="landingTitle">./portfolio</h1>
+      <section class="projects">
+        <div class="projects-left">
+          <h3>[ Featured Projects ]</h3>
+          <ul class="projects-list">
+            <li><a href="#">Project placeholder one</a></li>
+            <li><a href="#">Project placeholder two</a></li>
+            <li><a href="#">Project placeholder three</a></li>
+            <li><a href="#">Project placeholder four</a></li>
+          </ul>
         </div>
-        <div class="columnMainRight">
+        <div class="projects-right">
+          <h3>Title of active project</h3>
+          <img src="./src/img/me_irl.jpg" alt="project thumbnail" />
         </div>
       </section>
     </main>
 
     <footer>
-      <div class="footerLeft">
-        <p><a href="https://github.com/defectxr">GitHub</a></p>
-        <p><a href="#">Instagram</a></p>
-      </div>
-      <div class="footerRight">
-        <div class="credit">Written by Sara Myrheim.</div>
+      <div class="footer">
+        <div>
+          <div><a href="https://github.com/defectxr">GitHub</a></div>
+        </div>
+        <div><span>Written by Sara Myrheim.</span></div>
       </div>
     </footer>
   </body>

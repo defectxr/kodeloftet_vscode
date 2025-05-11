@@ -1,220 +1,225 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* ------------------------------ link styling ------------------------------ */
-
-a:link, a:visited {
-    color: inherit;
-    text-decoration: none;
-}
-
-a:hover, a:active {
-    color: inherit;
-    text-decoration: underline;
-}
-
-.headerNav a.active {
-    text-decoration: underline;
-}
-
-.projectsList a:hover {
-    color: #2b2b2b;
-    text-decoration: none;
-}
-
 /* ------------------------------- @font-face ------------------------------- */
 
 @font-face {
-    font-family: "PublicSans-Regular";
-    src: url("./src/fonts/PublicSans-Regular.ttf");
+  /* headings */
+  font-family: "PublicSans-Regular";
+  src: url("../portfolio/src/fonts/PublicSans-Regular.ttf");
 }
 
 @font-face {
-    font-family: "SchibstedGrotesk-Regular";
-    src: url("./src/fonts/SchibstedGrotesk-Regular.ttf");
+  /* body */
+  font-family: "SchibstedGrotesk-Regular";
+  src: url("../portfolio/src/fonts/SchibstedGrotesk-Regular.ttf");
 }
 
-@font-face {
-    font-family: "SpaceMono-Regular";
-    src: url("./src/fonts/SpaceMono-Regular.ttf");
+/* --------------------------- *, html, body, main -------------------------- */
+
+* {
+  margin: 0;
+  padding: 0;
 }
 
-/* ---------------------------------- body ---------------------------------- */
+html,
+body {
+  height: 100%;
+}
 
 body {
-    background-color: #ffffff;
-    font-family: "SchibstedGrotesk-Regular", sans-serif;
-    font-size: 100%;
-    color: #2b2b2b;
-    margin: 32px;
+  display: flex;
+  flex-direction: column;
+
+  background-color: #fff;
+  margin: 32px;
+
+  font-size: 100%;
+  font-family: "PublicSans-Regular", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  color: #2b2b2b;
 }
+
+main {
+  flex: 1 0 auto;
+}
+
+/* ----colors-----
+  bg: #fff
+  primary: #2b2b2b
+  accent: #797979
+  light: #e1e1e1
+  -----------------*/
 
 /* --------------------------------- header --------------------------------- */
 
-header {
-    display: flex;
-    font-size: 1em;
-    font-family: "PublicSans-Regular", sans-serif;
-    text-transform: uppercase;
-    letter-spacing: -1px;
-    padding-bottom: 70px;
-    border-bottom: solid 1px #e1e1e1;
-    margin-bottom: 30px;
+.header {
+  display: flex;
+  gap: 2.5em;
+
+  min-height: 90px;
+  border-bottom: solid 1px #e1e1e1;
+  margin-bottom: 2.5em;
 }
 
-.headerLeft {
-    flex: 1;
+.header-title {
+  flex: 1 1 33%;
 }
 
-.headerTitle {
-    color: #797979;
-    line-height: 150%;
+.header-title span {
+  color: #797979;
 }
 
-.headerRight {
-    flex: 2;
+.header-nav {
+  display: flex;
+  flex: 1 1 66%;
+  justify-content: space-between;
+  gap: 2.5em;
+
+  padding: 0;
+  list-style-type: none;
 }
 
-.headerNav {
-    list-style-type: none;
-    display: flex;
-    justify-content: space-between;
+.header-nav a {
+  text-decoration: none;
+  color: #2b2b2b;
 }
 
-/* ---------------------------------- main ---------------------------------- */
-
-main {
-    min-height: 350px;
-}
-
-.columnMain {
-    display: flex;
-    min-height: 350px;
-}
-
-.columnMainLeft {
-    flex: 1;
-}
-
-.columnMainRight {
-    flex: 2;
-}
-
-/* --------------------------------- landing -------------------------------- */
-
-.landingTitle {
-    font-size: 12em;
-    font-family: "SpaceMono-Regular", "Lucidia Grande", sans-serif;
-    font-style: italic;
-    color: #e1e1e1;
+.header-nav a:hover,
+a:focus {
+  text-decoration: underline;
 }
 
 /* -------------------------------- projects -------------------------------- */
 
-.projectsTitle {
-    font-size: 1em;
-    font-family: "PublicSans-Regular", sans-serif;
-    color: #797979;
-    text-transform: uppercase;
-    letter-spacing: -1px;
+.projects {
+  display: flex;
+  gap: 2.5em;
 }
 
-.projectsList {
-    margin: 2rem 0;
-    font-size: 1em;
-    font-family: "PublicSans-Regular", sans-serif;
-    color: #bcbbbb;
-    text-transform: uppercase;
-    letter-spacing: -1px;
-    list-style: none;
-
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
+.projects-left {
+  flex: 1 1 33%;
 }
 
-.projectsImg {
-    width: 100%;
-    height: 350px;
-    object-fit: cover;
-    vertical-align: middle;
+.projects-list {
+  padding: 0;
+  list-style-type: none;
+}
+
+.projects-list > * {
+  padding-bottom: 0.35em;
+}
+
+.projects-right {
+  flex: 1 1 66%;
+}
+
+.projects-right img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+}
+
+.projects-left h3 {
+  font-size: 100%;
+  font-weight: normal;
+  color: #797979;
+
+  margin-bottom: 2.5em;
+}
+
+.projects-right h3 {
+  font-size: 100%;
+  font-weight: normal;
+
+  margin-bottom: 2.5em;
+}
+
+.projects-list a {
+  text-decoration: none;
+  color: #e1e1e1;
+}
+
+.projects-list a:hover,
+.projects-list a:focus {
+  color: #2b2b2b;
 }
 
 /* ---------------------------------- about --------------------------------- */
 
 .about {
-    display: flex;
-    min-height: 350px;
-}
-
-.aboutText {
-    flex: 2;
-}
-
-.about h3 {
-    color: #797979;
+  display: flex;
 }
 
 .row {
-    margin-bottom: 1.5rem;
-    display: flex;
+  display: flex;
+  flex-direction: row;
 }
 
-.columnLeft {
-    font-size: 1em;
-    font-family: "PublicSans-Regular", sans-serif;
-    text-transform: uppercase;
-    letter-spacing: -1px;
-    flex: 1;
+.row > * {
+  width: 100%;
 }
 
-.columnRight {
-    flex: 1;
+.row:not(:last-child) > * {
+  margin-bottom: 2.5em;
 }
 
-.columnRight p {
-    margin-bottom: 1em;
+.about-text {
+  flex: 1 1 66%;
 }
 
-.aboutPortrait {
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-start;
-    flex: 1;
+.about-text h4 {
+  color: #797979;
 }
 
-.aboutImg {
-    width: 75%;
+.about-text p {
+  font-family: "SchibstedGrotesk-Regular", sans-serif;
+  text-transform: none;
+  letter-spacing: normal;
+}
+
+.about-text a {
+  text-decoration: none;
+  color: #2b2b2b;
+}
+
+.about-text a:hover,
+.about-text a:focus {
+  color: #797979;
+}
+
+.about-photo {
+  display: flex;
+  flex: 1 1 33%;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.about-photo > * {
+  width: 80%;
 }
 
 /* --------------------------------- footer --------------------------------- */
 
-footer {
-    display: flex;
-    font-size: 1em;
-    font-family: "PublicSans-Regular", sans-serif;
-    text-transform: uppercase;
-    letter-spacing: -1px;
-    padding-top: 70px;
-    border-top: solid 1px #e1e1e1;
-    margin-top: 30px;
+.footer {
+  display: flex;
+  flex-shrink: 0;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  min-height: 90px;
+  border-top: solid 1px #e1e1e1;
+  margin: 2.5em auto;
 }
 
-.footerLeft {
-    display: flex;
-    flex: 1;
-    flex-direction: column;
+.footer a {
+  text-decoration: none;
+  color: #2b2b2b;
 }
 
-.footerRight {
-    display: flex;
-    flex: 2;
-    justify-content: flex-end;
+.footer a:hover,
+a:focus {
+  text-decoration: underline;
 }
 
-.credit {
-    color: #bcbbbb;
+.footer span {
+  color: #797979;
 }

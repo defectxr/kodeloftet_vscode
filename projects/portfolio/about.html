@@ -1,73 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Sara Myrheim | Aspiring Web Developer</title>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
     <script type="module" src="script.js"></script>
+    <title>Sara Myrheim | Aspiring Web Developer</title>
   </head>
-
   <body>
     <header>
-      <a href="./index.html" class="headerLeft">
-        <div>Sara Myrheim</div>
-        <div class="headerTitle">[ Aspiring Web Developer ]</div>
-      </a>
-      <nav class="headerRight">
-        <ul class="headerNav">
-          <li><a href="./projects.html">Projects</a></li>
-          <li><a class="active" href="./about.html">About</a></li>
-          <li><a href="mailto:fakesara@hotmail.com">Contact</a></li>
+      <div class="header">
+        <div class="header-title">
+          <div>Sara Myrheim</div>
+          <div><span>[ Aspiring ] Web Developer</span></div>
+        </div>
+        <ul class="header-nav">
+          <li><a href="index.html">[ Projects ]</a></li>
+          <li><a href="about.html">[ About ]</a></li>
+          <li><a href="mailto:fakesara@hotmail.com">[ Contact ]</a></li>
         </ul>
-      </nav>
+      </div>
     </header>
 
     <main>
       <section class="about">
-        <div class="aboutText">
+        <div class="about-text">
           <div class="row">
-            <h3 class="columnLeft">
-              [ About ]
-            </h3>
-            <div class="columnRight">
-              <p>
-                About text...
-              </p>
-            </div>
+            <h4>[ About ]</h4>
+            <p>
+              Originally from coastal Helgeland, I have been based in Bergen
+              since 2018.<br /><br />I had my first skirmish with web design
+              while I was a teenager, managing and updating personal blogs to
+              reflect my ever changing sense of self. I humbly rendezvous with
+              it here, still evolving, albeit with a steadier sense of design
+              and concept.<br /><br />I am passionate about supporting living,
+              breathing, human creativity and activism. My goal is developing
+              the toolset to create digital experiences with a conscience.
+            </p>
           </div>
           <div class="row">
-            <h3 class="columnLeft">
-              [ Languages ]
-            </h3>
-            <div class="columnRight">
-              <p>HTML, CSS, JavaScript. The tiniest bit of Python.</p>
-            </div>
+            <h4>[ Languages ]</h4>
+            <p>HTML, CSS, JavaScript. Some Python.</p>
           </div>
           <div class="row">
-            <h3 class="columnLeft">
-              [ Contact ]
-            </h3>
-            <div class="columnRight">
-              <p>
-                <a href="mailto:fakesara@hotmail.com">fakesara@hotmail.com</a>
-              </p>
-            </div>
+            <h4>[ Contact ]</h4>
+            <p>
+              <a href="mailto:fakesara@hotmail.com">fakesara@hotmail.com</a>
+            </p>
           </div>
         </div>
-        <div class="aboutPortrait">
-          <img class="aboutImg" src="./src/img/me_irl.jpg" alt="me irl">
+        <div class="about-photo">
+          <img src="./src/img/portrait.jpg" alt="portrait thumbnail" />
         </div>
       </section>
     </main>
 
     <footer>
-      <div class="footerLeft">
-        <p><a href="https://github.com/defectxr">GitHub</a></p>
-        <p><a href="#">Instagram</a></p>
-      </div>
-      <div class="footerRight">
-        <div class="credit">Written by Sara Myrheim.</div>
+      <div class="footer">
+        <div>
+          <div><a href="https://github.com/defectxr">GitHub</a></div>
+        </div>
+        <div><span>Written by Sara Myrheim.</span></div>
       </div>
     </footer>
   </body>

@@ -1,0 +1,223 @@
+/* Practice project "Abstract" from frontendpractice.com */
+
+/* ---------------------------------- base ---------------------------------- */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --black: #000;
+  --white: #fff;
+  --primary: #dadbf1;
+  --accent: #4c5fd5;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: sans-serif;
+}
+
+body {
+  background-color: #dddddd;
+}
+
+/* --------------------------------- topbar --------------------------------- */
+
+.topbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+
+  color: var(--white);
+  font-size: 2.2rem;
+  font-weight: lighter;
+
+  background-color: var(--black);
+  padding: 2rem 10rem;
+}
+
+.topbar * {
+  display: flex;
+  align-items: center;
+}
+
+/* topbar-logo */
+
+.topbar-logo {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.topbar-logo img {
+  width: 3.5rem;
+}
+
+/* topbar-controls */
+
+.topbar-controls {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.topbar-button-request {
+  background-color: var(--black);
+  border: solid 1px var(--white);
+  border-radius: 10px;
+  padding: 0.8rem 2.5rem;
+}
+
+.topbar-button-signin {
+  background-color: var(--accent);
+  border: solid 1px var(--accent);
+  border-radius: 10px;
+  padding: 0.8rem 2.5rem;
+}
+
+/* topbar-links */
+
+.topbar a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* --------------------------------- search --------------------------------- */
+
+.search {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+
+  background-color: var(--primary);
+  padding: 12rem 0;
+}
+
+.search h2 {
+  font-size: 7.4rem;
+  font-weight: 400;
+}
+
+.searchbar input[type="search"] {
+  padding: 1rem;
+}
+
+/* ---------------------------------- menu ---------------------------------- */
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8rem 5rem;
+
+  background-color: var(--white);
+
+  padding: 20rem 9rem;
+}
+
+.card {
+  display: flex;
+  gap: 2rem;
+
+  width: 420px;
+  margin-bottom: 0rem;
+}
+
+.card-img img {
+  width: 110px;
+}
+
+.card-text h3 {
+  font-size: 2.1rem;
+
+  margin-bottom: 1rem;
+}
+
+.card-text p {
+  font-size: 1.8rem;
+  font-weight: 300;
+
+  margin-bottom: 2rem;
+}
+
+.card-text a {
+  font-size: 1.4rem;
+  text-decoration: none;
+  color: var(--accent);
+}
+
+/* --------------------------------- footer --------------------------------- */
+
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 5rem;
+
+  background-color: var(--black);
+  padding: 6rem 10rem;
+}
+
+/* footer-sitemap */
+
+.footer-sitemap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 9rem;
+}
+
+.sitemap-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.sitemap-card h4 {
+  color: var(--white);
+  font-size: 2.1rem;
+
+  margin-bottom: 1.8rem;
+}
+
+.sitemap-card a {
+  color: var(--white);
+  font-size: 1.6rem;
+  font-weight: lighter;
+  text-decoration: none;
+
+  margin-bottom: 0.6rem;
+}
+
+.sitemap-card h5 {
+  color: var(--white);
+  font-size: 1.6rem;
+
+  margin-top: 3rem;
+  margin-bottom: 0.6rem;
+}
+
+/* footer-credit */
+
+.footer-credit {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+
+  color: var(--white);
+  font-size: 1.8rem;
+  font-weight: 200;
+
+  min-height: 280px;
+}
+
+.footer-credit img {
+  width: 3.5rem;
+  margin-bottom: 1.8rem;
+}
+
+.footer-credit p {
+  line-height: 2.8rem;
+}

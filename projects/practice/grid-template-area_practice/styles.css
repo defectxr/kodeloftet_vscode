@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --yellow: #fbffa7;
+  --lightblue: #b1c5ff;
+  --green: #b6ffc0;
+  --red: #ff764d;
+  --purple: #d5b3ff;
+  --blue: #0000ff;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: sans-serif;
+}
+
+body {
+  background-color: #dddddd;
+}
+
+/* ---------------------------------- card ---------------------------------- */
+
+.deck {
+  display: grid;
+  gap: 1.5rem;
+  grid-auto-columns: 1fr;
+  grid-template-areas:
+    "one"
+    "two"
+    "three"
+    "four"
+    "five";
+
+  margin: 3rem;
+}
+
+.card {
+  border-radius: 15px;
+  padding: 1rem;
+}
+
+.card:nth-child(1) {
+  background-color: #b1c5ff;
+  grid-area: one;
+}
+.card:nth-child(2) {
+  background-color: #b6ffc0;
+  grid-area: two;
+}
+.card:nth-child(3) {
+  background-color: #fbffa7;
+  grid-area: three;
+}
+.card:nth-child(4) {
+  background-color: #d5b3ff;
+  grid-area: four;
+}
+.card:nth-child(5) {
+  background-color: #ff764d;
+  grid-area: five;
+}
+
+.card-info {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.card-info img {
+  width: 60px;
+}
+
+.card-info h2 {
+  font-size: 1.5rem;
+  font-weight: normal;
+}
+
+.card-info p {
+  font-size: 1.5rem;
+  font-weight: lighter;
+  font-style: italic;
+}
+
+.card-text {
+  padding: 1rem;
+}
+
+.card-text :nth-child(1) {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.4rem;
+}
+
+.card-text :nth-child(2) {
+  font-size: 1.8rem;
+  font-weight: lighter;
+}
+
+/* ---------------------------------- grid ---------------------------------- */
+
+@media screen and (min-width: 600px) {
+  .deck {
+    grid-template-areas:
+      "one one two five"
+      "three four four five";
+  }
+}

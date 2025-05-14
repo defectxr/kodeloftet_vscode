@@ -1,0 +1,422 @@
+/* PRACTICE CLONE OF https://www.ableton.com/en/about/ */
+
+/* ---------------------------------- base ---------------------------------- */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --yellow: #fbffa7;
+  --lightblue: #b1c5ff;
+  --green: #b6ffc0;
+  --red: #ff764d;
+  --purple: #d5b3ff;
+  --blue: #0000ff;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Futura", sans-serif;
+}
+
+body {
+  background-color: #f3f3f3;
+}
+
+/* --------------------------------- header --------------------------------- */
+
+/* topbar */
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+
+  padding: 1rem 3.5rem;
+
+  border-bottom: solid 2px #e2e2e2;
+}
+
+.topbar-nav {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.8rem;
+}
+
+.topbar-nav img {
+  width: 50px;
+}
+
+.topbar-navlist {
+  display: flex;
+  align-items: center;
+  gap: 1.8rem;
+
+  font-size: 1.8rem;
+  list-style-type: none;
+}
+
+.topbar-navlist span {
+  color: var(--red);
+}
+
+.topbar a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.topbar-login {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+
+  font-size: 1.4rem;
+}
+
+/* ---------------------------------- main ---------------------------------- */
+
+/* stickybar */
+
+.stickybar {
+  display: flex;
+
+  height: 72px;
+
+  padding: 1.5rem 3.5rem;
+}
+
+.stickybar-navlist {
+  display: flex;
+  align-items: center;
+  gap: 1.8rem;
+
+  font-size: 1.4rem;
+  list-style-type: none;
+}
+
+.stickybar-navlist span {
+  color: var(--red);
+}
+
+.stickybar a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* section paragraph */
+
+.paragraph {
+  margin: 0 25vw 8.33vw 25vw;
+}
+
+.paragraph h2 {
+  font-size: 2.6rem;
+  font-weight: lighter;
+  line-height: 1.5;
+
+  margin-bottom: 1em;
+}
+
+.paragraph p {
+  font-size: 1.8em;
+  font-weight: lighter;
+  font-family: Helvetica, sans-serif;
+  line-height: 1.5;
+
+  margin-bottom: 0.75em;
+}
+
+.paragraph a {
+  color: var(--blue);
+  text-decoration: none;
+}
+
+/* hero */
+
+.hero {
+  background-image: url(./src/img/hero.jpg);
+  background-size: cover;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-color: #e0e0e0;
+
+  height: calc(-100vw / 12 + 100vh);
+  margin: 0 8.33vw 8.33vw 8.33vw;
+
+  position: relative;
+}
+
+.hero h1 {
+  font-size: 11.2rem;
+  font-weight: normal;
+  color: var(--red);
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  margin-top: -75px;
+  margin-left: -200px;
+}
+
+/* desperate attempt to create same img effect w/o using bg-img */
+
+/* .hero {
+  margin: 0 8.33vw 8.33vw 8.33vw;
+  min-height: calc(-144px + 100vh);
+  position: relative;
+  background-color: #b1c5ff;
+}
+
+.hero img {
+  display: block;
+  max-width: 100%;
+  object-fit: cover;
+} */
+
+/* ------------------------------- collage-one ------------------------------ */
+
+.collage-one {
+  height: 58.33vw;
+  position: relative;
+  margin-bottom: 8.33vw;
+}
+
+.collage-one-bg {
+  height: 58.33vw;
+  width: 58.33vw;
+
+  position: absolute;
+  left: 41.66vw;
+  z-index: 0;
+
+  background-color: var(--yellow);
+}
+
+.collage-one__img1 {
+  background-image: url(./src/img/img1.jpg);
+  background-size: cover;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-color: #e0e0e0;
+
+  width: 41.66vw;
+  height: 41.66vw;
+
+  position: absolute;
+  left: 8.33vw;
+  top: 8.33vw;
+  z-index: 1;
+}
+
+.collage-one__img2 {
+  background-image: url(./src/img/img2.jpg);
+  background-size: cover;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-color: #e0e0e0;
+
+  width: 33.33vw;
+  height: 25vw;
+
+  position: absolute;
+  left: 58.33vw;
+  top: 16.66vw;
+  z-index: 1;
+}
+
+/* -------------------------------- interview ------------------------------- */
+.interview {
+  font-size: 1.2rem;
+  margin: 0 25vw 8.33vw 25vw;
+}
+
+.interview img {
+  width: 50vw;
+  margin-bottom: 1rem;
+}
+
+/* ------------------------------- collage-two ------------------------------ */
+
+.collage-two {
+  height: calc(100vw / 12 * 9);
+  position: relative;
+  margin-bottom: 8.33vw;
+}
+
+.collage-two-bg {
+  height: calc(100vw / 12 * 9);
+  width: calc(100vw / 12 * 7);
+
+  z-index: 0;
+
+  background-color: var(--green);
+}
+
+.collage-two__img3 {
+  background-image: url(./src/img/img3.jpg);
+  background-size: cover;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-color: #e0e0e0;
+
+  width: calc(100vw / 12 * 4);
+  height: calc(100vw / 12 * 3);
+
+  position: absolute;
+  left: 8.33vw;
+  top: 8.33vw;
+  z-index: 1;
+}
+
+.collage-two__img4 {
+  background-image: url(./src/img/img4.jpg);
+  background-size: cover;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-color: #e0e0e0;
+
+  width: calc(100vw / 12 * 4);
+  height: calc(100vw / 12 * 3);
+
+  position: absolute;
+  left: 8.33vw;
+  top: 41.66vw;
+  z-index: 1;
+}
+
+.collage-two__img5 {
+  background-image: url(./src/img/img5.jpg);
+  background-size: cover;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-color: #e0e0e0;
+
+  width: calc(100vw / 12 * 5);
+  height: calc(100vw / 12 * 5);
+
+  position: absolute;
+  left: 50vw;
+  top: 16.66vw;
+  z-index: 1;
+}
+
+/* --------------------------------- big-img -------------------------------- */
+
+.big-img {
+  background-image: url(./src/img/big1.jpg);
+  background-size: cover;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-color: #e0e0e0;
+
+  height: calc(-100vw / 12 + 100vh);
+  width: calc(100vw / 12 * 10);
+
+  margin: 0 8.33vw 8.33vw 8.33vw;
+}
+
+/* ------------------------------ collage-three ----------------------------- */
+
+.collage-three {
+  height: calc(100vw / 12 * 7);
+  position: relative;
+  margin-bottom: calc(100vw / 12 * 1);
+}
+
+.collage-three-bg {
+  height: calc(100vw / 12 * 7);
+  width: calc(100vw / 12 * 8);
+
+  position: absolute;
+  left: calc(100vw / 12 * 2);
+  z-index: 0;
+
+  background-color: var(--purple);
+}
+
+.collage-three__img6 {
+  background-image: url(./src/img/img6.jpg);
+  background-size: cover;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-color: #e0e0e0;
+
+  height: calc(100vw / 12 * 3);
+  width: calc(100vw / 12 * 4);
+
+  position: absolute;
+  top: calc(100vw / 12 * 2);
+  left: calc(100vw / 12 * 1);
+  z-index: 1;
+}
+
+.collage-three__img7 {
+  background-image: url(./src/img/img7.jpg);
+  background-size: cover;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-color: #e0e0e0;
+
+  height: calc(100vw / 12 * 5);
+  width: calc(100vw / 12 * 5);
+
+  position: absolute;
+  top: calc(100vw / 12 * 1);
+  left: calc(100vw / 12 * 7);
+  z-index: 1;
+}
+
+/* ------------------------------ last-collage ------------------------------ */
+
+.last-collage {
+  height: calc(100vw / 12 * 5);
+  position: relative;
+  margin-bottom: calc(100vw / 12 * 1);
+}
+
+.last-collage__img {
+  background-image: url(./src/img/big2.jpg);
+  background-size: cover;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-color: #e0e0e0;
+
+  height: calc(100vw / 12 * 5);
+  width: calc(100vw / 12 * 5);
+
+  position: absolute;
+  left: calc(100vw / 12 * 1);
+}
+
+.last-collage-bg {
+  height: calc(100vw / 12 * 5);
+  width: calc(100vw / 12 * 5);
+
+  position: absolute;
+  left: calc(100vw / 12 * 6);
+  z-index: 0;
+
+  padding: calc(100vw / 12 * 1.4) calc(100vw / 12 * 1);
+
+  background-color: var(--lightblue);
+}
+
+.last-collage-bg h2 {
+  font-size: 2.6rem;
+  font-weight: lighter;
+  line-height: 1.5;
+
+  margin-bottom: 1em;
+}
+
+.last-collage-bg a {
+  font-size: 2.6rem;
+  font-weight: lighter;
+
+  color: var(--blue);
+  text-decoration: none;
+}

@@ -1,3 +1,5 @@
+/* PRACTICE CLONE OF https://monogramcc.com/shop/ */
+
 /* -------------------------------------------------------------------------- */
 /*                                    base                                    */
 /* -------------------------------------------------------------------------- */
@@ -332,6 +334,51 @@ a {
 }
 
 /* -------------------------------------------------------------------------- */
+/*                                   footer                                   */
+/* -------------------------------------------------------------------------- */
+
+footer {
+  display: flex;
+  justify-content: center;
+  background-color: var(--blue);
+
+  padding-top: 3rem;
+  padding-bottom: 5rem;
+  margin-top: 5rem;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 5rem;
+  max-width: 1100px;
+
+  font-size: 0.875rem;
+  line-height: 1.4rem;
+  color: var(--pink);
+}
+
+.footer h4 {
+  font-weight: bold;
+  text-transform: uppercase;
+  padding-bottom: 1rem;
+}
+
+.sitemap {
+  display: flex;
+  gap: 5rem;
+}
+
+.sitemap > * {
+  min-width: max-content;
+}
+
+.sitemap ul {
+  list-style-type: none;
+  line-height: 1.4rem;
+}
+
+/* -------------------------------------------------------------------------- */
 /*                                link styling                                */
 /* -------------------------------------------------------------------------- */
 
@@ -341,4 +388,8 @@ a {
 
 .dropdown a:hover {
   color: var(--lightblue);
+}
+
+.footer a:hover {
+  color: var(--peach);
 }

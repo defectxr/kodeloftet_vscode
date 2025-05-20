@@ -1,0 +1,344 @@
+/* -------------------------------------------------------------------------- */
+/*                                    base                                    */
+/* -------------------------------------------------------------------------- */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --white: #f0efed;
+  --black: #080b1b;
+  --blue: #1a2456;
+  --lightblue: #c6c8d4;
+  --peach: #ff8b68;
+  --pink: #e8c4b5;
+}
+
+html {
+  font-size: 62.5‰;
+  font-family: Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                    body                                    */
+/* -------------------------------------------------------------------------- */
+
+body {
+  background-color: var(--white);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                   header                                   */
+/* -------------------------------------------------------------------------- */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+
+  color: var(--pink);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+
+  background-color: var(--blue);
+
+  box-shadow: 0 1px 15px rgba(0, 0, 0, 0.255);
+
+  padding: 5px;
+
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  z-index: 1;
+}
+
+/* ------------------------------- header logo ------------------------------ */
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.header-logo img {
+  max-height: 45px;
+}
+
+/* ------------------------------ header tools ------------------------------ */
+
+.header-tools {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.header-tools ul {
+  display: flex;
+  gap: 3rem;
+  list-style-type: none;
+}
+
+.header-tools div {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.header-tools div img {
+  max-height: 30px;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                    hero                                    */
+/* -------------------------------------------------------------------------- */
+
+.hero {
+  height: 650px;
+  position: relative;
+}
+
+.hero-background {
+  background-image: url(./src/img/hero.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  height: 100%;
+}
+
+.hero-overlay {
+  background-color: #000000b5;
+
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+/* ------------------------------- hero title ------------------------------- */
+
+.hero-title {
+  color: var(--pink);
+
+  position: absolute;
+  top: 40%;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+.hero-title h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+
+  margin-bottom: 1rem;
+}
+
+.hero-title p {
+  font-size: 1.1rem;
+  font-weight: lighter;
+
+  margin-bottom: 8rem;
+}
+
+.hero-title a {
+  color: var(--white);
+  font-size: 75px;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                              featured products                             */
+/* -------------------------------------------------------------------------- */
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  padding-top: 2.5rem;
+}
+
+.products li {
+  list-style-type: none;
+}
+
+/* ---------------------------- product container --------------------------- */
+
+.product-container {
+  max-width: 550px;
+  padding: 0 10px;
+  margin-bottom: 30px;
+
+  color: var(--blue);
+}
+
+.product-container:last-of-type {
+  min-width: 1100px;
+}
+
+.product-info {
+  display: flex;
+  justify-content: space-between;
+
+  margin-bottom: 5px;
+}
+
+.product-container h2 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.product-description {
+  font-size: 0.875rem;
+  line-height: 130%;
+}
+
+/* ------------------------------- product img ------------------------------ */
+
+.product-img {
+  display: inline-block;
+  max-width: 550px;
+  height: 380px;
+  position: relative;
+}
+
+.product-img:last-of-type {
+  max-width: 1100px;
+}
+
+.product-img img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  margin-bottom: 5px;
+}
+
+.img-hover {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  transition: all 0.25s ease;
+}
+
+.img-hover:hover {
+  opacity: 1;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                   divider                                  */
+/* -------------------------------------------------------------------------- */
+
+.divider {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 190px;
+
+  background-color: #d0d0d0;
+}
+
+.divider h3 {
+  color: var(--blue);
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+
+  margin-bottom: 1rem;
+}
+
+.divider p {
+  color: var(--blue);
+  font-size: 1.1rem;
+  font-weight: lighter;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                               other products                               */
+/* -------------------------------------------------------------------------- */
+
+.other-products {
+  max-width: 1100px;
+  margin: auto;
+  margin-bottom: 30px;
+}
+
+.prod {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px 50px;
+  padding-top: 2.5rem;
+}
+
+.prod li {
+  list-style-type: none;
+}
+
+.prod-container {
+  max-width: 333px;
+  color: var(--blue);
+}
+
+.prod-container img {
+  width: 100%;
+  max-height: 280px;
+  object-fit: cover;
+  margin-bottom: 5px;
+}
+
+.prod-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.prod-info h2 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.prod-description {
+  font-size: 0.875rem;
+  line-height: 130%;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                link styling                                */
+/* -------------------------------------------------------------------------- */
+
+.header-tools a:hover {
+  color: var(--peach);
+}
+
+.dropdown a:hover {
+  color: var(--lightblue);
+}

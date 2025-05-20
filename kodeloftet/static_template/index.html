@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
-    <script src="script.js"></script>
+    <script type="module" src="script.js"></script>
     <title>This is a title</title>
   </head>
   <body>
@@ -14,9 +14,10 @@
 
     <main>
       <!-- this is where the main stuff goes -->
-      <h1 class="header">Hello!</h1>
-      <p id="demo">Does JavaScript work?</p>
-      <button type="button" onclick="myFunction()">Let's test</button>
+      <h1 id="title">Hello!</h1>
+      <button id="button-change">Click to change!</button>
+      <p id="subtitle"></p>
+      <button id="button-add">Click to add!</button>
     </main>
 
     <footer>

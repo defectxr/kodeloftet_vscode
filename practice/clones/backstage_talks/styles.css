@@ -1,0 +1,183 @@
+/* PRACTICE CLONE OF https://backstagetalks.com/#issue8 */
+
+/* ---------------------------------- root ---------------------------------- */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: sans-serif;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 1.8rem;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+/* --------------------------------- general -------------------------------- */
+
+h1 {
+  font-size: 3.4rem;
+  letter-spacing: -2px;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 1.8rem;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/* --------------------------------- header --------------------------------- */
+
+header div:nth-child(1) {
+  position: fixed;
+  top: 1.5rem;
+  left: 2.5rem;
+}
+
+header div:nth-child(2) {
+  position: fixed;
+  top: 1.5rem;
+  right: 2.5rem;
+}
+
+/* ---------------------------------- main ---------------------------------- */
+
+.full-page > * {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+
+  height: 100vh;
+  width: 100vw;
+
+  padding-top: 9rem;
+
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+#issue-6 {
+  background-color: #fcf3d4;
+}
+
+#issue-5 {
+  background-color: #a183bd;
+}
+
+#issue-4 {
+  background-color: #e99551;
+}
+
+#issue-3 {
+  background-color: #264c88;
+}
+
+#issue-2 {
+  background-color: #dfddd1;
+}
+
+#issue-1 {
+  background-color: #dc9b98;
+}
+
+/* --------------------------------- section -------------------------------- */
+
+.issue-img {
+  width: 350px;
+  height: 482px;
+
+  box-shadow: -2px 2px 15px rgba(0, 0, 0, 0.25);
+}
+
+.issue-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.issue-text {
+  text-align: center;
+}
+
+.issue-text div:not(:first-child) {
+  font-size: 1.5rem;
+  font-weight: bolder;
+}
+
+.issue-text > div {
+  margin-bottom: 2rem;
+}
+
+/* links */
+
+#issue-6 a {
+  color: #e83c4b;
+}
+
+#issue-5 a {
+  color: #cde8f8;
+}
+
+#issue-4 a {
+  color: #313847;
+}
+
+#issue-3 a {
+  color: #fff;
+}
+
+#issue-2 a {
+  color: #687768;
+}
+
+#issue-1 a {
+  color: #0d1e8e;
+}
+
+/* --------------------------------- footer --------------------------------- */
+
+footer {
+  line-height: 2.5rem;
+}
+
+.footer-content {
+  position: fixed;
+  bottom: 1.5rem;
+  left: 2.5rem;
+  width: 35rem;
+}
+
+.footer-content p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.footer-issue {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 2.5rem;
+
+  font-weight: lighter;
+}

@@ -1,0 +1,746 @@
+/* -------------------------------------------------------------------------- */
+/*                                 @font-face                                 */
+/* -------------------------------------------------------------------------- */
+
+@font-face {
+  font-family: "Inter";
+  font-weight: 400;
+  src: url("src/fonts/inter-v18-latin-regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-weight: 600;
+  src: url("src/fonts/inter-v18-latin-semibold-600.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-weight: 500;
+  src: url("src/fonts/inter-v18-latin-medium-500.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Playfair Display";
+  font-weight: 800;
+  src: url("src/fonts/playfair-display-v37-latin-extrabold-800.woff2")
+    format("woff2");
+}
+
+@font-face {
+  font-family: "Playfair Display";
+  font-weight: 500;
+  src: url("src/fonts/playfair-display-v37-latin-medium-500.woff2")
+    format("woff2");
+}
+
+@font-face {
+  font-family: "Playfair Display";
+  font-weight: 800;
+  font-style: italic;
+  src: url("src/fonts/playfair-display-v37-latin-extrabold-800italic.woff2")
+    format("woff2");
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-weight: 400;
+  src: url("src/fonts/roboto-v47-latin-regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Roboto Mono";
+  font-weight: 400;
+  src: url("src/fonts/roboto-mono-v23-latin-regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Roboto Mono";
+  font-weight: 500;
+  src: url("src/fonts/roboto-mono-v23-latin-medium-500.woff2") format("woff2");
+}
+
+/* -------------------------------------------------------------------------- */
+/*                              root, reset, body                             */
+/* -------------------------------------------------------------------------- */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --green: #b3b950;
+  --black: #000;
+  --white: #fff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  font-size: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+body {
+  background-color: var(--white);
+  width: 100vw;
+  letter-spacing: 10%;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                   utility                                  */
+/* -------------------------------------------------------------------------- */
+
+/* ----------------------------- aside.discount ----------------------------- */
+
+#discount {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+
+  height: 4rem;
+
+  font-size: 1.4rem;
+  font-family: "Roboto Mono";
+  font-weight: 400;
+  text-transform: uppercase;
+
+  background-color: var(--green);
+  border-top: 3px solid black;
+  border-bottom: solid 3px black;
+
+  padding: 1rem 4rem;
+}
+
+#discount p:nth-child(2) {
+  position: absolute;
+  right: 2.5rem;
+}
+
+/* --------------------------------- buttons -------------------------------- */
+
+/* small */
+
+.button-small {
+  color: var(--white);
+  font-size: 1.8rem;
+  font-family: "Roboto Mono";
+  font-weight: 400;
+  text-transform: uppercase;
+
+  background-color: var(--black);
+  border: 0.5rem solid var(--black);
+  border-radius: 35px;
+  padding: 0.5rem 3.5rem;
+
+  transition: 0.1s ease;
+}
+
+.button-small:hover {
+  color: var(--black);
+  background-color: var(--white);
+}
+
+/* medium */
+
+.button-medium {
+  box-sizing: border-box;
+
+  color: var(--white);
+  font-size: 2.6rem;
+  font-family: "Roboto Mono";
+  font-weight: 400;
+  text-transform: uppercase;
+
+  background-color: var(--black);
+  border: 0.5rem solid var(--black);
+  border-radius: 35px;
+  padding: 1rem 7.5rem;
+
+  transition: 0.1s ease;
+}
+
+.button-medium:hover {
+  color: var(--black);
+  background-color: var(--white);
+}
+
+/* ----------------------------- scroll banners ----------------------------- */
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.banner {
+  width: 100%;
+  overflow-x: hidden;
+
+  border-bottom: solid 3px black;
+}
+
+.scroll {
+  display: flex;
+  width: 3900px;
+
+  color: var(--black);
+  font-size: 120px;
+  font-family: "Playfair Display";
+  font-weight: 800;
+  font-style: italic;
+  letter-spacing: normal;
+  text-transform: uppercase;
+
+  padding: 12px 0;
+  
+  animation: scroll 20s linear infinite;
+}
+
+.scroll-item {
+  white-space: nowrap;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                   topbar                                   */
+/* -------------------------------------------------------------------------- */
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4;
+
+  height: 9rem;
+
+  font-size: 1.8rem;
+  font-family: "Roboto Mono";
+  font-weight: 400;
+  text-transform: uppercase;
+
+  border-bottom: solid 3px black;
+  padding: 0 2.5rem;
+}
+
+/* ----------------------------------- nav ---------------------------------- */
+
+.nav-list {
+  display: flex;
+  gap: 4rem;
+  list-style-type: none;
+}
+
+.nav-list a:hover {
+  text-decoration: underline;
+}
+
+/* ---------------------------------- tools --------------------------------- */
+
+.topbar-tools {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.topbar-tools img {
+  width: 3.25rem;
+  transition: 0.1s scale ease;
+}
+
+.topbar-tools img:hover {
+  scale: 110%;
+}
+
+/* ---------------------------------- menu ---------------------------------- */
+
+.topbar-menu {
+  display: none;
+  position: relative;
+
+  height: 100%;
+  border-left: 3px solid black;
+  padding-left: 2.5rem;
+}
+
+.topbar-menu img {
+  width: 3.25rem;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                    hero                                    */
+/* -------------------------------------------------------------------------- */
+
+/* -------------------------------- hero-img -------------------------------- */
+
+.hero-img {
+  min-height: calc(100vh - 184px);
+  background-image: url(src/img/hero.jpg);
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+
+  position: relative;
+
+  background-color: #b3b950;
+  border-bottom: solid 3px black;
+}
+
+/* ------------------------------ hero-img-text ----------------------------- */
+
+.hero-img-text {
+  position: absolute;
+  bottom: 7.5rem;
+  left: 2.5rem;
+}
+
+.hero-img-text p {
+  font-size: 2.4rem;
+  font-family: "Roboto";
+  font-weight: 400;
+  letter-spacing: normal;
+
+  text-shadow: 0px 0px 2.4rem #fff;
+
+  margin-bottom: 3rem;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                    about                                   */
+/* -------------------------------------------------------------------------- */
+
+.about {
+  display: flex;
+  min-height: 100vh;
+  border-bottom: solid 3px black;
+}
+
+/* ------------------------------- about text ------------------------------ */
+
+.about-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50vw;
+  padding: 8rem 6rem;
+}
+
+.about-text h2 {
+  font-size: 7rem;
+  font-family: "Inter";
+  font-weight: 500;
+  letter-spacing: normal;
+  line-height: 100%;
+  text-transform: uppercase;
+
+  margin-bottom: 5rem;
+}
+
+.about-text p {
+  font-size: 1.8rem;
+  font-family: "Inter";
+  font-weight: 400;
+  letter-spacing: normal;
+  line-height: 150%;
+}
+
+.about-text p {
+  margin-bottom: 1.5rem;
+}
+
+/* ------------------------------- about link ------------------------------- */
+
+@keyframes arrow {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(2rem);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.about-text a {
+  display: flex;
+  justify-self: end;
+
+  width: max-content;
+
+  font-size: 3rem;
+  font-family: "Inter";
+
+  animation: arrow 2s ease-in-out infinite;
+}
+
+.about-text a:hover {
+  animation-play-state: paused;
+}
+/* -------------------------------- about img ------------------------------- */
+
+.about-img {
+  width: 50vw;
+
+  background-image: url(src/img/foam.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  border-left: solid 3px black;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                  products                                  */
+/* -------------------------------------------------------------------------- */
+
+.products {
+  display: flex;
+  gap: 2.5rem;
+  border-bottom: solid 3px black;
+  padding: 2.5rem;
+
+  width: 100vw;
+}
+
+.products > * {
+  flex: 1;
+}
+
+/* ------------------------------ product cards ----------------------------- */
+
+.products img {
+  width: 100%;
+  height: 460px;
+  object-fit: cover;
+  border-radius: 20px;
+  margin-bottom: 3rem;
+  transition: 0.5s scale ease;
+}
+
+.products img:hover {
+  scale: 101%;
+}
+
+.products-text {
+  display: flex;
+  flex-direction: column;
+  margin: 0 2.5rem;
+}
+
+.products-text h2 {
+  font-size: 4.2rem;
+  font-family: "Inter";
+  font-weight: 500;
+  letter-spacing: normal;
+  line-height: 90%;
+  text-transform: uppercase;
+  width: 80%;
+  margin-bottom: 2rem;
+}
+
+.products-text p {
+  font-size: 2rem;
+  font-family: "Inter";
+  font-weight: 400;
+  letter-spacing: normal;
+  margin-bottom: 3rem;
+}
+
+.products a {
+  align-self: center;
+}
+
+/* -------------------------------- shop link ------------------------------- */
+
+.shop-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  height: 19rem;
+  border-bottom: solid 3px black;
+
+  transition: 0.125s background-color ease;
+}
+
+.shop-link:hover {
+  background-color: var(--green);
+}
+
+.shop-link a {
+  font-size: 8rem;
+  font-family: "Inter";
+  font-weight: 500;
+  letter-spacing: normal;
+  text-transform: uppercase;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                   footer                                   */
+/* -------------------------------------------------------------------------- */
+
+footer {
+  display: flex;
+  min-height: 65vh;
+}
+
+footer h2 {
+  font-size: 1.6rem;
+  font-family: "Roboto Mono";
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* --------------------------------- contact -------------------------------- */
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+  color: var(--white);
+  background-color: var(--black);
+  padding: 2.5rem;
+}
+
+.contact p {
+  font-size: 6rem;
+  font-family: "Playfair Display";
+  font-weight: 500;
+  letter-spacing: normal;
+  text-transform: lowercase;
+  line-height: 110%;
+}
+
+/* ---------------------------------- site ---------------------------------- */
+
+.site {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+  color: var(--black);
+}
+
+.sitemap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  flex: 1;
+  padding: 2.5rem;
+  border-bottom: solid 3px black;
+}
+
+.sitemap ul {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  font-size: 2.5rem;
+  font-family: "Playfair Display";
+  font-weight: 800;
+  letter-spacing: normal;
+  text-transform: lowercase;
+  line-height: 200%;
+
+  list-style-type: none;
+}
+
+.sitemap li::after {
+  content: " /";
+}
+
+.sitemap li:last-child::after {
+  content: "";
+}
+
+/* ---------------------------------- logo ---------------------------------- */
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+
+  color: var(--black);
+  font-size: 120px;
+  font-family: "Playfair Display";
+  font-weight: 800;
+  font-style: italic;
+  letter-spacing: normal;
+
+  background-color: var(--green);
+  border-bottom: solid 3px black;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                 pages.html                                 */
+/* -------------------------------------------------------------------------- */
+
+.pages section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 100vh;
+
+  font-size: 5rem;
+  font-family: "Inter";
+  font-weight: 500;
+  letter-spacing: normal;
+  line-height: 100%;
+  text-transform: uppercase;
+
+  background-color: var(--green);
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                 responsive                                 */
+/* -------------------------------------------------------------------------- */
+
+@media screen and (max-width: 1200px) {
+  /* --------------------------------- topbar --------------------------------- */
+
+  .topbar {
+    justify-content: end;
+  }
+
+  .nav-list {
+    display: none;
+  }
+
+  .topbar-tools a:first-child {
+    display: none;
+  }
+
+  .topbar-menu {
+    display: unset;
+  }
+
+  /* ----------------------------- scroll banners ----------------------------- */
+
+  .scroll {
+    font-size: 60px;
+  }
+
+  /* ---------------------------------- hero ---------------------------------- */
+
+  .hero-img {
+    min-height: 60vh;
+    background-image: url(src/img/spread.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    position: relative;
+
+    background-color: #b3b950;
+    border-bottom: solid 3px black;
+  }
+
+  /* ---------------------------------- about --------------------------------- */
+
+  .about {
+    flex-direction: column;
+    min-height: max-content;
+  }
+
+  .about-text {
+    width: 100vw;
+  }
+
+  .about-text h2 {
+    font-size: 4.2rem;
+  }
+
+  /* -------------------------------- products -------------------------------- */
+
+  .products {
+    flex-wrap: wrap;
+    gap: 7rem;
+    position: relative;
+  }
+
+  .products img {
+    height: 40vh;
+  }
+
+  .products-text {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .products > div::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    padding-top: 3rem;
+    border-bottom: 1px solid lightgray;
+  }
+
+  .products > div:last-child:after {
+    content: none;
+  }
+
+  /* -------------------------------- shop-link ------------------------------- */
+
+  .shop-link {
+    height: max-content;
+    text-align: center;
+    background-color: var(--green);
+    margin-bottom: 2.5rem;
+  }
+
+  .shop-link a {
+    font-size: 2.8rem;
+    padding: 4rem;
+  }
+
+  /* --------------------------------- footer --------------------------------- */
+
+  footer {
+    flex-direction: column;
+  }
+
+  .contact p {
+    margin-bottom: 2.5rem;
+    font-size: 3.5rem;
+  }
+
+  .sitemap ul {
+    justify-content: start;
+  }
+}

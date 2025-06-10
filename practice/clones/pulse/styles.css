@@ -1,0 +1,387 @@
+/* PRACTICE CLONE OF https://pulseapp.com/pricing */
+
+/* -------------------------------------------------------------------------- */
+/*                                    reset                                   */
+/* -------------------------------------------------------------------------- */
+
+:root {
+  font-size: 62.5%;
+  color: var(--clr-body);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  font-style: normal;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                  variables                                 */
+/* -------------------------------------------------------------------------- */
+
+:root {
+  --clr-prim: #01ad6a;
+  --clr-accent: #1fe374;
+  --clr-light: #eafaf1;
+  --clr-white: #fff;
+  --clr-lightgrey: #fcfcfc;
+  --clr-grey: #f2f3f3;
+  --clr-darkgrey: #83858a;
+  --clr-heading: #0a0d16;
+  --clr-body: #464951;
+
+  --fnt-prim: Avenir Next;
+  --fnt-sec: Helvetica;
+
+  --fnt-wght-heading: 700;
+  --fnt-wght-body: 400;
+
+  --fnt-sz-big: 2rem;
+  --fnt-sz-med: 1.8rem;
+  --fnt-sz-small: 1.6rem;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                   utility                                  */
+/* -------------------------------------------------------------------------- */
+
+.wrapper {
+  max-inline-size: 92.5vw;
+  margin-inline: auto;
+}
+
+.container {
+  padding-inline: 2rem;
+}
+
+.flex-spacebetween {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* --------------------------------- buttons -------------------------------- */
+
+.button-shadow {
+}
+
+.button-scale {
+  font-size: var(--fnt-sz-big);
+  background-color: var(--clr-accent);
+  width: 18.5rem;
+  padding-block: 1rem;
+  margin-block: 2rem;
+
+  transition: 0.06s;
+  transition-property: scale;
+}
+
+.plan-plus:hover,
+.plan-premium:hover {
+  .button-scale {
+    color: var(--clr-heading);
+    scale: 110%;
+  }
+}
+
+/* ---------------------------------- text ---------------------------------- */
+
+.text-heading {
+  font-family: var(--fnt-sec);
+  font-weight: var(--fnt-wght-heading);
+}
+
+.text-body {
+  font-family: var(--fnt-prim);
+  font-weight: var(--fnt-wght-body);
+  letter-spacing: 0.3px;
+  line-height: 160%;
+}
+
+.text-center {
+  text-align: center;
+  margin-inline: auto;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                   heading                                  */
+/* -------------------------------------------------------------------------- */
+
+header {
+  background-color: var(--clr-light);
+  padding: 5rem 0;
+}
+
+.header-logo {
+  font-size: 4.2rem;
+  background-image: linear-gradient(to right, #4daa70, #6be080);
+  color: transparent;
+  background-clip: text;
+}
+
+header ul {
+  display: flex;
+  gap: 3.8rem;
+
+  font-size: var(--fnt-sz-small);
+  color: var(--clr-prim);
+  list-style: none;
+}
+
+header a:hover,
+a:active {
+  color: var(--clr-heading);
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                    hero                                    */
+/* -------------------------------------------------------------------------- */
+
+.hero {
+  background-color: var(--clr-light);
+  border-bottom: 1px solid #d5d5d5;
+}
+
+/* ---------------------------------- intro --------------------------------- */
+
+.intro {
+  margin-bottom: 6rem;
+}
+
+.intro h1 {
+  font-size: 5.8rem;
+  font-family: var(--fnt-prim);
+  font-weight: var(--fnt-wght-heading);
+  color: var(--clr-heading);
+  line-height: 105%;
+
+  width: 500px;
+  margin-bottom: 1.25rem;
+}
+
+.intro p {
+  font-size: var(--fnt-sz-med);
+  width: 550px;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                    plans                                   */
+/* -------------------------------------------------------------------------- */
+
+.plans > * > * {
+  flex: 1;
+  max-width: 75ch;
+}
+
+/* plans text */
+
+.plans h2 {
+  font-size: var(--fnt-sz-big);
+  color: var(--clr-prim);
+
+  margin-bottom: 1rem;
+}
+
+.plans h3 {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding-block: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.plans .plan-price {
+  font-size: 2.2rem;
+  color: var(--clr-darkgrey);
+}
+
+.plans p {
+  font-size: var(--fnt-sz-small);
+}
+
+/* plans lists */
+
+.plans ul {
+  font-size: var(--fnt-sz-small);
+  padding-left: 1.5rem;
+  line-height: 140%;
+}
+
+.plans li {
+  padding-bottom: 1.25rem;
+}
+
+.plan-plus ul,
+.plan-premium ul {
+  list-style-type: "✔ ";
+}
+
+.plan-plus ul li::marker,
+.plan-premium ul li::marker {
+  font-size: 75%;
+  color: var(--clr-prim);
+}
+
+.plan-plus ul :last-child,
+.plan-premium ul :last-child {
+  margin-bottom: 3.5rem;
+}
+
+/* ------------------------------- plan-basics ------------------------------ */
+
+.plan-basics {
+  padding-inline: rem;
+}
+
+/* -------------------------------- plan-plus ------------------------------- */
+
+.plan-plus {
+  background-color: var(--clr-white);
+  border: 1px solid var(--clr-prim);
+  border-radius: 10px 10px 0 0;
+}
+
+.plan-plus .topper {
+  font-size: 1.1rem;
+  color: var(--clr-white);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+
+  background-color: var(--clr-prim);
+
+  padding-block: 0.5rem;
+  margin-bottom: 3.5rem;
+  border-radius: 10px 10px 0 0;
+}
+
+.plan-plus h2 {
+  font-size: 4.8rem;
+  font-family: var(--fnt-prim);
+  font-weight: var(--fnt-wght-heading);
+  line-height: 100%;
+}
+
+/* ------------------------------ plan-premium ------------------------------ */
+
+.plan-premium {
+  background-color: var(--clr-white);
+  border: 1px solid #d5d5d5;
+  border-left: none;
+}
+
+.plan-premium .topper {
+  font-size: 1.4rem;
+  line-height: 125%;
+
+  background-color: var(--clr-grey);
+
+  padding-block: 1.75rem;
+  padding-inline: 4.5rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid #d5d5d5;
+}
+
+.plan-premium h2 {
+  font-size: 3.4rem;
+  font-family: var(--fnt-prim);
+  line-height: 100%;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                  testimony                                 */
+/* -------------------------------------------------------------------------- */
+
+.testimony {
+  margin-block: 10rem;
+}
+
+.testimony-img {
+  background-color: #d5d5d5;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-inline: auto;
+  margin-bottom: 1.5rem;
+}
+
+.testimony-quote {
+  font-size: 2.4rem;
+  color: var(--clr-heading);
+  width: 750px;
+  margin-bottom: 1.5rem;
+}
+
+.testimony-source {
+  font-size: 1.1rem;
+  color: var(--clr-prim);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                     faq                                    */
+/* -------------------------------------------------------------------------- */
+
+.faq {
+  margin-block: 9rem;
+}
+
+.answers {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 3.5rem;
+}
+
+.answers > div {
+  width: 93ch;
+}
+
+.faq h2 {
+  width: 100%;
+
+  font-size: 4.4rem;
+  font-weight: var(--fnt-wght-heading);
+  color: var(--clr-heading);
+
+  margin-bottom: 2.5rem;
+}
+
+.faq h3 {
+  font-size: var(--fnt-sz-big);
+  color: var(--clr-heading);
+
+  margin-bottom: 0.5rem;
+}
+
+.faq p {
+  font-size: var(--fnt-sz-med);
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                 responsive                                 */
+/* -------------------------------------------------------------------------- */
+
+/* breakpoint 1: main: row > column */
+/* breakpoint 2: nav: condense, FAQ: 2 column > 1 column */

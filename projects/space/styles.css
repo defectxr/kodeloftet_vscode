@@ -1,0 +1,237 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  font-style: normal;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                   utility                                  */
+/* -------------------------------------------------------------------------- */
+
+:root {
+  --font-sz-s: 1.5rem;
+  --font-sz-m: 1.8rem;
+  --font-sz-l: 4.8rem;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                    body                                    */
+/* -------------------------------------------------------------------------- */
+
+body {
+  background-color: black;
+
+  font-family: sans-serif;
+  color: white;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                   header                                   */
+/* -------------------------------------------------------------------------- */
+
+header {
+  position: fixed;
+  top: 4rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+header nav {
+  position: relative;
+
+  width: max-content;
+  padding-block: 0.5rem;
+  padding-inline: 2rem;
+
+  border-radius: 20px;
+
+  background: rgba(43, 43, 43, 0.25);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+}
+
+header nav::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+
+  border-radius: inherit;
+  border: 1px solid transparent;
+  background: linear-gradient(rgb(210, 210, 210), rgb(42, 42, 42)) border-box;
+  mask: linear-gradient(black) border-box, linear-gradient(black) padding-box;
+  mask-composite: subtract;
+}
+
+header ul {
+  display: flex;
+  gap: 4rem;
+
+  font-size: var(--font-sz-s);
+  font-weight: 600;
+  list-style-type: none;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                    hero                                    */
+/* -------------------------------------------------------------------------- */
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;
+
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: var(--font-sz-l);
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.hero p {
+  font-size: var(--font-sz-m);
+  font-weight: 200;
+  line-height: 130%;
+  max-width: 85ch;
+}
+
+.hero a {
+  font-size: 6rem;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                   planets                                  */
+/* -------------------------------------------------------------------------- */
+
+.planets section {
+  height: 100vh;
+}
+
+/* ------------------------------- planet text ------------------------------ */
+
+.planet-text h2 {
+  font-size: var(--font-sz-l);
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.planet-text p {
+  font-size: var(--font-sz-m);
+  font-weight: 200;
+  line-height: 130%;
+  max-width: 50ch;
+}
+
+.planet-tags {
+  display: flex;
+  gap: 1.5rem;
+}
+
+/* ------------------------------- planet tags ------------------------------ */
+
+.planet-tags p {
+  font-size: var(--font-sz-s);
+  font-weight: 600;
+
+  width: max-content;
+  padding-block: 0.5rem;
+  padding-inline: 2rem;
+  margin-top: 3rem;
+
+  border-radius: 20px;
+  border: 1px solid gray;
+
+  background: rgba(43, 43, 43, 0.25);
+}
+
+/* ------------------------------- planet img ------------------------------- */
+
+.planet-img img {
+  margin-right: 2.5rem;
+}
+
+/* planet img scale */
+
+.hourglass-twins img {
+  width: 360px;
+}
+
+.timber-hearth img {
+  width: 365px;
+}
+
+.brittle-hollow img {
+  width: 420px;
+}
+
+.giants-deep img {
+  width: 550px;
+}
+
+.dark-bramble img {
+  width: 500px;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                   sidebar                                  */
+/* -------------------------------------------------------------------------- */
+
+.sidebar {
+  position: fixed;
+  top: 50%;
+  left: 5.5rem;
+  transform: translate(-50%, -50%);
+}
+
+.sidebar ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+
+  list-style-type: none;
+}
+
+.sidebar img {
+  width: 30px;
+  opacity: 40%;
+  transition: 0.5s;
+}
+
+.sidebar img:hover {
+  width: 75px;
+  opacity: 100%;
+}

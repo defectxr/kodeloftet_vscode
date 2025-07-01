@@ -1,0 +1,44 @@
+/* -------------------------------------------------------------------------- */
+/*                              reset, root, body                             */
+/* -------------------------------------------------------------------------- */
+
+:root {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  --clr-light: #fafafa;
+  --clr-mid: #c1c1c1;
+  --clr-dark: #000;
+}
+
+h1 {
+  font-weight: normal;
+  font-size: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(241, 231, 218);
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                  todo-list                                 */
+/* -------------------------------------------------------------------------- */
+
+.todo-list {
+  background-color: var(--clr-light);
+}
+.list-div {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.list-div > * {
+  height: max-content;
+}

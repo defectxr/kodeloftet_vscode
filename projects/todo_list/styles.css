@@ -2,19 +2,20 @@
 /*                              reset, root, body                             */
 /* -------------------------------------------------------------------------- */
 
-:root {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
-  --clr-light: #fafafa;
-  --clr-mid: #c1c1c1;
-  --clr-dark: #000;
 }
 
-h1 {
-  font-weight: normal;
-  font-size: inherit;
+:root {
+  --clr-light: rgb(251, 251, 251);
+  --clr-mid: rgb(237, 237, 237);
+  --clr-dark: #a9a9a9;
+  --clr-black: #0a0a0a;
+
+  --fnt-sz-l: 3.8rem;
+  --fnt-sz-m: 1.6rem;
 }
 
 html {
@@ -22,8 +23,24 @@ html {
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: rgb(241, 231, 218);
+  font-family: "Inter";
+  background-color: var(--clr-black);
+}
+
+/* ------------------------------- @font-face ------------------------------- */
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  src: url(src/fonts/inter-v19-latin-500.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  src: url(src/fonts/inter-v19-latin-700.woff2) format("woff2");
 }
 
 /* -------------------------------------------------------------------------- */
@@ -31,14 +48,140 @@ body {
 /* -------------------------------------------------------------------------- */
 
 .todo-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+
+  max-width: 600px;
+  padding: 6rem 2rem 2.5rem 2rem;
+  margin: auto;
+  margin-block: 6rem;
+
   background-color: var(--clr-light);
+  border-radius: 15px;
 }
+
+/* ---------------------------------- title --------------------------------- */
+
+h1 {
+  font-size: var(--fnt-sz-l);
+  font-weight: 700;
+  color: var(--clr-black);
+}
+
+/* ---------------------------------- input --------------------------------- */
+
+.input-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+/* text field */
+
+.input-text {
+  display: flex;
+  flex: 1;
+
+  font-family: "Inter";
+  font-size: var(--fnt-sz-m);
+  font-weight: 500;
+
+  padding: 1.5rem;
+  border: none;
+  border-radius: 7.5px;
+  background-color: var(--clr-mid);
+}
+
+/* add button */
+
+.input-button {
+  font-family: "Inter";
+  font-size: var(--fnt-sz-m);
+  font-weight: 500;
+  color: var(--clr-light);
+
+  padding-inline: 2rem;
+  padding-block: 1.5rem;
+  border: none;
+  border-radius: 7.5px;
+  background-color: var(--clr-black);
+}
+
+/* -------------------------------- task-list ------------------------------- */
+
+.task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* list-div */
+
 .list-div {
   display: flex;
   align-items: center;
   gap: 1rem;
+
+  padding: 1.5rem;
+  border-radius: 7.5px;
+
+  background-color: var(--clr-mid);
 }
 
-.list-div > * {
-  height: max-content;
+/* list-item */
+
+.list-item {
+  font-family: "Inter";
+  font-size: var(--fnt-sz-m);
+  font-weight: 500;
+  color: var(--clr-black);
+}
+
+.checked p {
+  text-decoration: line-through;
+  color: var(--clr-dark);
+}
+
+/* checkbox */
+
+.list-checkbox {
+  width: 1.6rem;
+  height: 1.6rem;
+}
+
+/* delete button */
+
+.delete-button {
+  font-family: monospace;
+  font-size: var(--fnt-sz-m);
+
+  width: 1.6rem;
+  height: 1.6rem;
+  border: none;
+  margin-left: auto;
+
+  background-color: transparent;
+
+  transition: opacity 0.2s ease-in;
+}
+
+.list-div:not(:hover) .delete-button {
+  opacity: 0;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                 responsive                                 */
+/* -------------------------------------------------------------------------- */
+
+@media only screen and (max-width: 600px) {
+  .todo-list {
+    min-height: 100vh;
+    margin: 2rem 0 0 0;
+    border-radius: 15px 15px 0 0;
+  }
+
+  .list-div:not(:hover) .delete-button {
+    opacity: 100;
+  }
 }

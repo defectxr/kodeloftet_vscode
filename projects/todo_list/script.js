@@ -30,7 +30,7 @@ function newTask() {
 
     //add child element "delete-button"
     const deleteButton = document.createElement("button");
-    deleteButton.textContent = "Remove";
+    deleteButton.textContent = "✕";
     deleteButton.classList.add("delete-button");
     listDiv.appendChild(deleteButton);
     //remove parent listDiv on click of delete button if checkbox is checked
@@ -48,15 +48,14 @@ function newTask() {
   }
 }
 
+//run function on button click
 inputButton.addEventListener("click", function () {
   newTask();
 });
-// fungerer
 
+//run function on enter keydown in input field
 inputText.addEventListener("keydown", function () {
-  if (Event.key === "Enter") {
-    console.log("Enter pressed!");
-    inputButton.click();
+  if (event.key === "Enter") {
+    newTask();
   }
 });
-// ingen respons i konsoll, ingen click event
